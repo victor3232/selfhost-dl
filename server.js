@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const crypto = require('crypto').webcrypto;
+global.crypto = crypto;
 const Downloader = require('./src/downloader');
 const app = express();
 const PORT = process.env.PORT || 3996; // PORT
